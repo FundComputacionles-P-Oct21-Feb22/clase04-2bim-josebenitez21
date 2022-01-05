@@ -2,22 +2,29 @@
 2.  funcion principal()
 3.      variable, i[0-n]
 4.      variable2, i[0-n]
-4.      variable3, i[0-n]
-6.      variable <-- 10 
-7.      variable2 <-- 20 
-8.      variable3 <-- obtenerSumaDos(variable, variable2) // (10, 20) // 32 
-9.      obtenerSuma(variable, variable3) // (10, 32)
-10.  fin funcion principal 
-11. // se define un método o función
-12.  funcion obtenerSuma(a, i; b, i) 
-13.     p, i[0-n]
-14.     p <-- a + b
-15.     Escribir "La suma es :" + p // La suma es : 42
-16.  fin funcion obtenerSuma
-17.
-18.  funcion obtenerSumaDos(a, i; b, i) : i 
-19.     p, i[0-n]
-20.     p <-- a + b + 2
-21.     return p // 32
+5.      variable3, i[0-n]
+6.  Escribir "Ingrese el primer número a sumar"
+7.  Leer  variable 
+8.  Escribir "Ingrese el segundo número a sumar"
+9.  Leer variable2 
+10.      variable3 <-- obtenerSumaDos(variable, variable2) // (10, 20) // 32 
+11.      obtenerSuma(variable, variable3) // (10, 32)
+12.  fin funcion principal 
+13. // se define un método o función
+14.  funcion obtenerSuma(a, i; b, i) //mensaje que diga si está en el rango correcto
+				     //Si la suma está entre el rango 20 y 30 "Suma dentro de rango"
+15.     p, i[0-n]		     //Caso contrario: "Suma fuera de rango"
+16.     p <-- a + b  
+17.    Si p >=20 AND p<=30 entonces	
+18.     Escribir "Suma dentro de rango"
+19.     Caso Coontario 
+20. 	Escribir "Suma fuera de rango"
+21.    Fin si
 22.  fin funcion obtenerSuma
-23. Fin
+23.
+24.  funcion obtenerSumaDos(a, i; b, i) : i 
+25.     p, i[0-n]
+26.     p <-- a + b + 2
+27.     return p // 32
+28.  fin funcion obtenerSuma
+29. Fin
